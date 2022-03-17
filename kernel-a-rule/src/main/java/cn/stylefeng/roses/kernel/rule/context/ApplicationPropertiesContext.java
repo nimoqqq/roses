@@ -8,6 +8,8 @@ import org.springframework.core.env.ConfigurableEnvironment;
  * <p>
  * 此类的使用必须激活 ConfigInitListener
  *
+ * 单例模式
+ *
  * @author fengshuonan
  * @date 2021/2/26 18:27
  */
@@ -23,6 +25,10 @@ public class ApplicationPropertiesContext {
     private ApplicationPropertiesContext() {
     }
 
+    /**
+     *
+     * @param configurableEnvironment: 获取配置文件解析的数据
+     */
     public void initConfigs(ConfigurableEnvironment configurableEnvironment) {
         applicationName = configurableEnvironment.getProperty("spring.application.name");
         contextPath = configurableEnvironment.getProperty("server.servlet.context-path");
