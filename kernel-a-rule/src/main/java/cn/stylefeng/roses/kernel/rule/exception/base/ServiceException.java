@@ -43,6 +43,8 @@ import static cn.stylefeng.roses.kernel.rule.constants.RuleConstants.RULE_MODULE
  * <p>
  * 第三种是第三方系统调用出错，例如文件服务调用失败，RPC调用超时
  *
+ * 注解 EqualsAndHashCode(callSuper = true)：此注解会生成equals(Object other) 和 hashCode()方法。
+ * callSuper = true ：调用父类 equals 方法，默认不调用
  * @author fengshuonan
  * @date 2020/10/15 9:07
  */
